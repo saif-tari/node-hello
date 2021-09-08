@@ -67,3 +67,7 @@ jobs:
           echo "The next release version $NEXT_VERSION}}"
           echo "Current Version  $NEXT_VERSION-$GITHUB_NUM_COMMIT.$GITHUB_SHA_SHORT"
           
+      - uses: bagbyte/use-private-action@v0.0.2
+        with:
+            private-action: saif-tari/custom-action-poc
+            private-action-token: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
